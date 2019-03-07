@@ -45,6 +45,7 @@ values."
      markdown
      org
      latex
+     shell
      (shell :variables
              shell-default-height 30
              shell-default-position 'bottom)
@@ -128,7 +129,8 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
+   dotspacemacs-themes '(dichromacy
+                         spacemacs-dark
                          spacemacs-light
                          gruvbox
                          espresso
@@ -310,6 +312,7 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  (setenv "WORKON_HOME" "~/.conda/envs") 
   )
 
 (defun dotspacemacs/user-config ()
